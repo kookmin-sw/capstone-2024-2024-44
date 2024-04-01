@@ -31,7 +31,7 @@
 
 ## 4. 기타
 
-[앱구조(3.29)]<https://drive.google.com/file/d/1o9UdTUin2alFZXCpzkuG9XcSl9tEK71f/view?usp=drive_link>
-[중간발표]<https://docs.google.com/presentation/d/1_qkKu7JDgMFqmcFl_OCWx4XRKlcaqItC/edit?usp=drive_link&ouid=107832605414245000690&rtpof=true&sd=true>
+(https://drive.google.com/file/d/1o9UdTUin2alFZXCpzkuG9XcSl9tEK71f/view?usp=drive_link, "앱구조(3.29)")
+(https://docs.google.com/presentation/d/1_qkKu7JDgMFqmcFl_OCWx4XRKlcaqItC/edit?usp=drive_link&ouid=107832605414245000690&rtpof=true&sd=true, 중간발표)
 
 
