@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## 1. 프로젝트 소개
 
-You can use the [editor on GitHub](https://github.com/kookmin-sw/cap-template/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+ 사진작가와 모델이 서로 소통할 수 있는 애플리케이션입니다. 사진작가와 모델의 협업이 더 원활하게 되도록 
+사진작가와 모델이 소통할 수 있는 애플리케이션을 만들고자 하였습니다. 또한 사진작가와 모델 외에도 커뮤니티를 통해 사진을 공유할 수 있습니다.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 2. 주요기능 소개
 
-### Markdown
+* 메인화면에서 사진작가/모델/일반의 프로필을 선택해서 들어갈 수 있습니다.
+* 사진작가와 모델은 사진과 자기소개를 올릴 수 있습니다. 
+* 서로 메세지를 주고 받을 수 있습니다.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## 3. 팀 소개
 
-```markdown
-Syntax highlighted code block
+#### **backend**
+* 이준모
 
-# Header 1
-## Header 2
-### Header 3
+* 소지연
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+#### **frontend**
+* 종세용(ux/ui)
 
-**Bold** and _Italic_ and `Code` text
+* 마해홍
 
-[Link](url) and ![Image](src)
-```
+* 압둘라
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+* 기우항
 
-### Jekyll Themes
+## 4. 기타
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kookmin-sw/cap-template/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+[앱구조(3.29)](https://drive.google.com/file/d/1o9UdTUin2alFZXCpzkuG9XcSl9tEK71f/view?usp=drive_link)
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[중간발표](https://docs.google.com/presentation/d/1_qkKu7JDgMFqmcFl_OCWx4XRKlcaqItC/edit?usp=drive_link&ouid=107832605414245000690&rtpof=true&sd=true)
