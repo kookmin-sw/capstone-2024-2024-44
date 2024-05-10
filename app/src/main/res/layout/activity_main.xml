@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_background"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/baseline_person_pin_24"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rounded_input"
+            android:padding="15dp"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:id="@+id/username_input"
+            android:layout_marginTop="32dp"
+            android:textSize="20sp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rounded_input"
+            android:padding="15dp"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:id="@+id/password_input"
+            android:layout_marginTop="15dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_login"
+            android:paddingRight="28dp"
+            android:paddingLeft="28dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:backgroundTint="@color/white"
+            android:textSize="20sp"
+            android:textColor="#ee2a7b"
+            android:text="Login"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textColor="@color/white"
+            android:id="@+id/sign_up"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</RelativeLayout>
