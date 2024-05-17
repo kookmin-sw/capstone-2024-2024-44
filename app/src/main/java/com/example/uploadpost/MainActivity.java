@@ -1,5 +1,7 @@
 package com.example.uploadpost;
 
+import static java.sql.Types.NULL;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     String Tag = "MainActivity";
     private Button post_btn;
     private Button add_btn;
+    Uri img;
 
 
 
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 String content = String.valueOf(input_article.getText());
                 Post post = new Post(title, content);
                 savePosts(post);
-                savePhotos();
+                savePhotos(img, title);
                 Intent intent = new Intent(MainActivity.this, Ok.class);
                 startActivity(intent);
             }
@@ -81,10 +84,11 @@ public class MainActivity extends AppCompatActivity {
         myRef.child(uid).push().setValue(post);
     }
 
-    public void savePhotos() {
+    public void savePhotos(Uri image, String title) {
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference myRef = storage.getReference("post");
-
+        String uid = "admin";
+        myRef.child(uid).child(title).putFile(image);
     }
 
     @Override
@@ -96,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 if (resultCode == RESULT_OK) {
                     Uri uri = data.getData();
                     photo_section.setImageURI(uri);
+                    img = uri;
                 }
                 break;
         }
