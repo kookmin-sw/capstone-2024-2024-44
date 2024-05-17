@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/msgContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/edittext_background"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:minLines="1"
+            android:maxLines="5"
+            android:id="@+id/msgEditText"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="#808080" />
+
+        <Button
+            android:id="@+id/sendMsgBtn"
+            android:background="@android:color/transparent"
+            android:text="send"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="send"/>
+    </LinearLayout>
+</RelativeLayout>
