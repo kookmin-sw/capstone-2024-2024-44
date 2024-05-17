@@ -15,8 +15,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.example.uploadpost.models.Post;
+
 public class MainActivity extends AppCompatActivity {
 
+    EditText input_theme;
     EditText input_article;
     ImageView photo_section;
     String Tag = "MainActivity";
@@ -34,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        input_theme = findViewById(R.id.input_theme);
         input_article = findViewById(R.id.input_article);
         input_article.setMovementMethod(new ScrollingMovementMethod());
 
@@ -41,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
         post_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String title = String.valueOf(input_theme.getText());
+                String content = String.valueOf(input_article.getText());
+                Post post = new Post(title, content);
+                savePosts(post);
                 Intent intent = new Intent(MainActivity.this, Ok.class);
                 startActivity(intent);
             }
@@ -56,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 1);
             }
         });
+    }
+
+    public void savePosts(Post post) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("post");
+        myRef.setValue(post);
     }
 
     @Override
