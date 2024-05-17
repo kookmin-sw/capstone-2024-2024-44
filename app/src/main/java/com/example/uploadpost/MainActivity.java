@@ -17,6 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import com.example.uploadpost.models.Post;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     String Tag = "MainActivity";
     private Button post_btn;
     private Button add_btn;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 String content = String.valueOf(input_article.getText());
                 Post post = new Post(title, content);
                 savePosts(post);
+                savePhotos();
                 Intent intent = new Intent(MainActivity.this, Ok.class);
                 startActivity(intent);
             }
@@ -71,7 +77,14 @@ public class MainActivity extends AppCompatActivity {
     public void savePosts(Post post) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("post");
-        myRef.setValue(post);
+        String uid = "admin";
+        myRef.child(uid).push().setValue(post);
+    }
+
+    public void savePhotos() {
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference myRef = storage.getReference("post");
+
     }
 
     @Override
