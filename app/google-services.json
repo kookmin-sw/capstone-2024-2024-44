@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "785236050225",
+    "firebase_url": "https://yue-pai-default-rtdb.firebaseio.com",
+    "project_id": "yue-pai",
+    "storage_bucket": "yue-pai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785236050225:android:7520c525b47fc2dd9a3010",
+        "android_client_info": {
+          "package_name": "com.demo.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5DFZwv3KLHmYllGjoblPROjosdfZlFqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
